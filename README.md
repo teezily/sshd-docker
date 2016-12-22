@@ -1,5 +1,7 @@
 # sshd-docker
 
+[![](https://images.microbadger.com/badges/version/teezily/sshd.svg)](https://microbadger.com/images/teezily/sshd "Get your own version badge on microbadger.com")
+
 An image based on Debian Jessie which runs an openssh server.
 
 ## Usage
