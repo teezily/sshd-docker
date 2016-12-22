@@ -1,0 +1,12 @@
+#!/bin/bash
+
+mkdir -m 0755 -p /data
+chown root:root /data
+
+id -u $SSH_USER > /dev/null 2>&1
+if [ $? -ne 0 ]
+then
+    useradd $SSH_USER --home-dir /data/$SSH_USER --create-home -s /bin/bash
+fi
+echo "$SSH_USER:$SSH_PASS" | chpasswd
+/usr/sbin/sshd -D
